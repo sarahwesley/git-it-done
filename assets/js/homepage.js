@@ -15,15 +15,14 @@ var getUserRepos = function(user) {
     })
     .catch(function(error) {
         alert("unable to connect to github");
-    });
-
         // check if api returend any repos
         if (repos.length === 0) {
             repoContainerEl.textContent = "No repositories found.";
             return;
-        }
+        };
     });
-};
+}
+
 
 getUserRepos();
 
